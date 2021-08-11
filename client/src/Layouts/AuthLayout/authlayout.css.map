@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,WAAW,CAAC;EACV,UAAU,ECEL,OAAO;CDDb",
+    "sources": [
+        "authlayout.scss",
+        "../../components/variables/variables.scss"
+    ],
+    "names": [],
+    "file": "authlayout.css"
+}
