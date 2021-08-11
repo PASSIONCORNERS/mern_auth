@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,MAAM,CAAC;EACL,UAAU,ECEL,OAAO;CDDb",
+    "sources": [
+        "login.scss",
+        "../variables/variables.scss"
+    ],
+    "names": [],
+    "file": "login.css"
+}

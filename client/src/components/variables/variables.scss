@@ -1,0 +1,26 @@
+// colors
+$purple-dark: #1d1927;
+$purple-main: #2a2438;
+$purple-light: #544f5f;
+$purple-lighter: #99979e;
+$pink: #f96a8b;
+$yellow: #fbc02d;
+$blue: #2196f3;
+$green: #009688;
+
+// mixins
+@mixin for-tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin for-laptop {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+@mixin for-desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
