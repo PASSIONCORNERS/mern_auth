@@ -1,5 +1,39 @@
 @import "../variables/variables.scss";
 
-.login {
-  background: $pink;
+.login_btn {
+  display: flex;
+  flex-direction: column;
+  button {
+    margin: 1em 0;
+    padding: 1.2em;
+    border-radius: 5px;
+    border: none;
+    width: 370px;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    background: linear-gradient(to right, $yellow, $pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      font-size: 1.1rem;
+      margin-left: 10px;
+    }
+  }
+  button:hover {
+    transition: all 0.3s ease;
+    box-shadow: none;
+    background: linear-gradient(to left, $yellow, $pink);
+  }
+  .btn-alt {
+    background: linear-gradient(to left, $yellow, $pink);
+  }
+  .btn-alt:hover {
+    transition: all 0.3s ease;
+    box-shadow: none;
+    background: linear-gradient(to right, $yellow, $pink);
+  }
 }

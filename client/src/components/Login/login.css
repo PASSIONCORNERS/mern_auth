@@ -1,4 +1,63 @@
-.login {
-  background: #f96a8b;
+.login_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login_btn button {
+  margin: 1em 0;
+  padding: 1.2em;
+  border-radius: 5px;
+  border: none;
+  width: 370px;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  background: -webkit-gradient(linear, left top, right top, from(#fbc02d), to(#f96a8b));
+  background: linear-gradient(to right, #fbc02d, #f96a8b);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login_btn button svg {
+  font-size: 1.1rem;
+  margin-left: 10px;
+}
+
+.login_btn button:hover {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: -webkit-gradient(linear, right top, left top, from(#fbc02d), to(#f96a8b));
+  background: linear-gradient(to left, #fbc02d, #f96a8b);
+}
+
+.login_btn .btn-alt {
+  background: -webkit-gradient(linear, right top, left top, from(#fbc02d), to(#f96a8b));
+  background: linear-gradient(to left, #fbc02d, #f96a8b);
+}
+
+.login_btn .btn-alt:hover {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: -webkit-gradient(linear, left top, right top, from(#fbc02d), to(#f96a8b));
+  background: linear-gradient(to right, #fbc02d, #f96a8b);
 }
 /*# sourceMappingURL=login.css.map */

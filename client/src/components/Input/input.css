@@ -1,0 +1,65 @@
+.input {
+  margin: 1.5em 0;
+}
+
+.input label {
+  position: relative;
+  font-size: 1rem;
+}
+
+.input label input {
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  background-color: #544f5f;
+  padding: 1em;
+  border-radius: 5px;
+  width: 370px;
+  outline: none;
+  font-size: 1rem;
+  border: 2px solid transparent;
+}
+
+.input label span {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  color: #99979e;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: 300;
+  font-size: 0.85rem;
+}
+
+.input label input:not(:placeholder-shown) + span {
+  color: transparent;
+  -webkit-transform: translate3d(0, -6px, 0) scale(0.75);
+          transform: translate3d(0, -6px, 0) scale(0.75);
+}
+
+.input label input:focus {
+  border: 2px solid #f96a8b;
+}
+
+.input label input:focus + span {
+  top: -15px;
+  font-size: 10px;
+  background: -webkit-gradient(linear, left top, right top, from(#fbc02d), to(#f96a8b));
+  background: linear-gradient(to right, #fbc02d, #f96a8b);
+  border-radius: 4px;
+  padding: 0 5px;
+  color: #fff;
+}
+
+.input label .input_icon {
+  color: #1d1927;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(92%, -50%);
+          transform: translate(92%, -50%);
+  width: 100%;
+  cursor: pointer;
+}
+/*# sourceMappingURL=input.css.map */
