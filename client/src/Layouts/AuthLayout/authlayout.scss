@@ -1,5 +1,61 @@
 @import "../../components/variables/variables.scss";
 
 .authlayout {
-  background: $pink;
+  height: 100vh;
+  background: $purple-dark;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &_logo {
+    border-radius: 50%;
+    padding: 2em;
+    margin-bottom: 4em;
+    animation: float 6s ease-in-out infinite;
+    img {
+      max-width: 100px;
+    }
+  }
+  &_actions {
+    display: flex;
+    justify-content: space-between;
+    max-width: 370px;
+    width: 100%;
+    margin-top: 2em;
+    padding: 0 2px;
+    p {
+      text-transform: uppercase;
+      cursor: pointer;
+      font-weight: 300;
+    }
+    &-l {
+      color: $yellow;
+    }
+    &-r {
+      color: $pink;
+    }
+  }
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0 rgba(252, 222, 255, 0.6);
+    transform: translateX(0);
+  }
+  25% {
+    box-shadow: 0 25px 15px 0 rgba(255, 133, 173, 0.2);
+    transform: translateX(5px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0 rgba(255, 133, 173, 0.2);
+    transform: translateY(-5px);
+  }
+  75% {
+    box-shadow: 0 25px 15px 0 rgba(255, 133, 173, 0.2);
+    transform: translateX(5px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0 rgba(252, 222, 255, 0.6);
+    transform: translateX(0);
+  }
 }

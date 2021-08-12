@@ -3,7 +3,7 @@ import AuthLayout from "./Layouts/AuthLayout/AuthLayout";
 import ProfileLayout from "./Layouts/ProfileLayout/ProfileLayout";
 
 function App() {
-  const isLoggedIn = true;
+  const isLoggedIn = false;
 
   return (
     <Router>
