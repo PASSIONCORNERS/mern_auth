@@ -21,7 +21,7 @@ const Input = ({
           name={name}
           onChange={handleChange}
           defaultValue={defaultValue}
-          disalbed={disabled}
+          disabled={disabled}
           placeholder="&nbsp;"
           autoComplete="off"
         />

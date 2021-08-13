@@ -1,11 +1,9 @@
-import { useState } from "react";
-import { FcGoogle } from "react-icons/fc";
+import Input from "../Input/Input";
 import { MdVisibility } from "react-icons/md";
 import { MdVisibilityOff } from "react-icons/md";
-import Input from "../Input/Input";
-import "./login.css";
+import { useState } from "react";
 
-const Login = () => {
+const Register = () => {
   const [visible, setVisible] = useState(false);
 
   const handleClick = () => {
@@ -13,22 +11,26 @@ const Login = () => {
   };
 
   return (
-    <form className="login">
-      <Input type="email" text="Email" />
+    <form>
+      <Input type="text" text="Name" />
+      <Input type="text" text="Email" />
       <Input
         type={visible ? "text" : "password"}
         icon={visible ? <MdVisibility /> : <MdVisibilityOff />}
         text="Password"
         handleClick={handleClick}
       />
+      <Input
+        type={visible ? "text" : "password"}
+        icon={visible ? <MdVisibility /> : <MdVisibilityOff />}
+        text="Confirm Password"
+        handleClick={handleClick}
+      />
       <div className="login_btn">
-        <button>login</button>
-        <button className="btn-alt">
-          sign in <FcGoogle />
-        </button>
+        <button>register</button>
       </div>
     </form>
   );
 };
 
-export default Login;
+export default Register;
