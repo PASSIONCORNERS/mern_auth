@@ -1,0 +1,20 @@
+@import "../../components/variables/variables.scss";
+
+.activate {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  letter-spacing: 2px;
+  background: $purple-dark;
+  p {
+    font-size: 1.5rem;
+    color: $yellow;
+    text-transform: capitalize;
+    span {
+      cursor: pointer;
+      color: $pink;
+    }
+  }
+}

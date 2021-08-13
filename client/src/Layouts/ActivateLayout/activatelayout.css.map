@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,SAAS,CAAC;EACR,MAAM,EAAE,KAAK;EACb,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,WAAW,EAAE,GAAG;EAChB,cAAc,EAAE,GAAG;EACnB,UAAU,ECRE,OAAO;CDkBpB;;AAjBD,AAQE,SARO,CAQP,CAAC,CAAC;EACA,SAAS,EAAE,MAAM;EACjB,KAAK,ECNA,OAAO;EDOZ,cAAc,EAAE,UAAU;CAK3B;;AAhBH,AAYI,SAZK,CAQP,CAAC,CAIC,IAAI,CAAC;EACH,MAAM,EAAE,OAAO;EACf,KAAK,ECXJ,OAAO;CDYT",
+    "sources": [
+        "activatelayout.scss",
+        "../../components/variables/variables.scss"
+    ],
+    "names": [],
+    "file": "activatelayout.css"
+}

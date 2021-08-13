@@ -1,0 +1,27 @@
+.activate {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 300;
+  letter-spacing: 2px;
+  background: #1d1927;
+}
+
+.activate p {
+  font-size: 1.5rem;
+  color: #fbc02d;
+  text-transform: capitalize;
+}
+
+.activate p span {
+  cursor: pointer;
+  color: #f96a8b;
+}
+/*# sourceMappingURL=activatelayout.css.map */
