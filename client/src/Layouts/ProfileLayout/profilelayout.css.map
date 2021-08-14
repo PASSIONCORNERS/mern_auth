@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAEA,AAAA,cAAc,CAAC;EACb,UAAU,ECEL,OAAO;CDDb",
+    "mappings": "AAEA,AAAA,IAAI,CAAC;EACH,UAAU,ECFE,OAAO;CDGpB;;AAED,AAAA,cAAc,CAAC;EACb,UAAU,ECNE,OAAO;EDOnB,OAAO,EAAE,IAAI;EACb,QAAQ,EAAE,MAAM;CACjB",
     "sources": [
         "profilelayout.scss",
         "../../components/variables/variables.scss"

@@ -1,0 +1,39 @@
+@import "../../components/variables/variables.scss";
+
+.appbar {
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgba($color: $purple-light, $alpha: 0.8);
+  backdrop-filter: saturate(80%) blur(20px);
+  z-index: 2;
+}
+.appbar_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 15px;
+}
+.appbar_logo {
+  display: flex;
+  align-items: center;
+  img {
+    width: 35px;
+  }
+  p {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: $pink;
+    margin-left: 12px;
+  }
+}
+.appbar_avatar {
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}

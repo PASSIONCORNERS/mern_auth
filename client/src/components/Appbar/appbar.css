@@ -1,0 +1,56 @@
+.appbar {
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(84, 79, 95, 0.8);
+  -webkit-backdrop-filter: saturate(80%) blur(20px);
+          backdrop-filter: saturate(80%) blur(20px);
+  z-index: 2;
+}
+
+.appbar_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.appbar_logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.appbar_logo img {
+  width: 35px;
+}
+
+.appbar_logo p {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #f96a8b;
+  margin-left: 12px;
+}
+
+.appbar_avatar img {
+  width: 50px;
+  height: 50px;
+}
+/*# sourceMappingURL=appbar.css.map */

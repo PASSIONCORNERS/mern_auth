@@ -1,4 +1,12 @@
+body {
+  background: #1d1927;
+}
+
 .profilelayout {
-  background: #f96a8b;
+  background: #1d1927;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
 }
 /*# sourceMappingURL=profilelayout.css.map */
