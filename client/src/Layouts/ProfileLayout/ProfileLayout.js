@@ -1,3 +1,4 @@
+import Sidebar from "../../components/Sidebar/Sidebar";
 import Appbar from "../../components/Appbar/Appbar";
 import "./profilelayout.css";
 
@@ -7,6 +8,7 @@ const ProfileLayout = () => {
       {/* appbar */}
       <Appbar />
       {/* sidebar */}
+      <Sidebar />
       {/* content */}
       <div className="profilelayout_content">
         {/* feed */}
