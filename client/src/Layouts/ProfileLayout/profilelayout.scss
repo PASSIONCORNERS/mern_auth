@@ -9,3 +9,14 @@ body {
   display: flex;
   overflow: hidden;
 }
+.profilelayout_sidebar {
+  display: none;
+}
+.profilelayout_sidebar.open {
+  display: initial;
+}
+@include for-desktop {
+  .profilelayout_sidebar {
+    display: initial;
+  }
+}

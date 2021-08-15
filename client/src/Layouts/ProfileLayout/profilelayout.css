@@ -9,4 +9,18 @@ body {
   display: flex;
   overflow: hidden;
 }
+
+.profilelayout_sidebar {
+  display: none;
+}
+
+.profilelayout_sidebar.open {
+  display: initial;
+}
+
+@media (min-width: 1200px) {
+  .profilelayout_sidebar {
+    display: initial;
+  }
+}
 /*# sourceMappingURL=profilelayout.css.map */
