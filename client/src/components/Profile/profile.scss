@@ -1,0 +1,50 @@
+@import "../../components/variables/variables.scss";
+
+.profile {
+  background-color: rgba($color: $purple-light, $alpha: 0.8);
+  border-radius: 5px;
+  padding: 2em;
+  width: 100%;
+  margin: 0 0 2em 0;
+}
+.profile_avatar-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  text-align: center;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  img {
+    width: 200px;
+    height: 200px;
+    box-shadow: 1px 1px 15px -15px #000;
+  }
+  svg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 100%;
+    width: 50%;
+    opacity: 0;
+    text-align: center;
+    transition: all 0.3s ease;
+    &:hover {
+      transition: all 0.3s ease;
+      opacity: 0.9;
+    }
+  }
+}
+.profile_avatar-input {
+  display: none;
+}
+.profile_input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

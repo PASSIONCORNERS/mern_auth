@@ -15,8 +15,40 @@ body {
 .profilelayout_sidebar.open {
   display: initial;
 }
+.profilelayout_content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: calc(4% + 75px);
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 5em;
+  margin: 0;
+}
+.profilelayout_content-feed {
+  width: 100%;
+  order: 2;
+}
+.profilelayout_content-profile {
+  width: 100%;
+  order: 1;
+}
 @include for-desktop {
   .profilelayout_sidebar {
     display: initial;
+  }
+  .profilelayout_content {
+    padding-left: 280px;
+    flex-direction: row;
+  }
+  .profilelayout_content-feed {
+    width: 50%;
+    order: 1;
+  }
+  .profilelayout_content-profile {
+    width: 45%;
+    order: 2;
   }
 }
