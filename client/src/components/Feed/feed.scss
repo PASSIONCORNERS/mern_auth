@@ -1,0 +1,35 @@
+@import "../../components/variables/variables.scss";
+
+.feed {
+  background-color: rgba($color: $purple-light, $alpha: 0.8);
+  border-radius: 5px;
+  padding: 2em;
+  width: 100%;
+  margin: 0 0 2em 0;
+  p {
+    font-weight: 300;
+    color: $purple-lighter;
+  }
+  &_date {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    p {
+      margin-left: 10px;
+    }
+  }
+  &_img {
+    margin-bottom: 1em;
+    img {
+      max-height: 300px;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+  }
+  &_content {
+    margin: 1em 0;
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}

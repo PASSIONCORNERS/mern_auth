@@ -1,3 +1,4 @@
+import Feed from "../../components/Feed/Feed";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Appbar from "../../components/Appbar/Appbar";
 import "./profilelayout.css";
@@ -25,6 +26,9 @@ const ProfileLayout = () => {
       {/* content */}
       <div className="profilelayout_content">
         {/* feed */}
+        <div className="profilelayout_content-feed">
+          <Feed />
+        </div>
         {/* profile */}
       </div>
     </div>

@@ -1,0 +1,46 @@
+.feed {
+  background-color: rgba(84, 79, 95, 0.8);
+  border-radius: 5px;
+  padding: 2em;
+  width: 100%;
+  margin: 0 0 2em 0;
+}
+
+.feed p {
+  font-weight: 300;
+  color: #99979e;
+}
+
+.feed_date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1em;
+}
+
+.feed_date p {
+  margin-left: 10px;
+}
+
+.feed_img {
+  margin-bottom: 1em;
+}
+
+.feed_img img {
+  max-height: 300px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.feed_content {
+  margin: 1em 0;
+}
+
+.feed_content p {
+  font-size: 0.8rem;
+}
+/*# sourceMappingURL=feed.css.map */
