@@ -13,7 +13,7 @@
   background-color: #544f5f;
   padding: 1em;
   border-radius: 5px;
-  width: 370px;
+  width: 300px;
   outline: none;
   font-size: 1rem;
   border: 2px solid transparent;
@@ -61,5 +61,11 @@
           transform: translate(92%, -50%);
   width: 100%;
   cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  .input label input {
+    width: 370px;
+  }
 }
 /*# sourceMappingURL=input.css.map */

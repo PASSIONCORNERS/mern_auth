@@ -10,7 +10,7 @@
       background-color: $purple-light;
       padding: 1em;
       border-radius: 5px;
-      width: 370px;
+      width: 300px;
       outline: none;
       font-size: 1rem;
       border: 2px solid transparent;
@@ -48,6 +48,15 @@
       transform: translate(92%, -50%);
       width: 100%;
       cursor: pointer;
+    }
+  }
+}
+@include for-desktop {
+  .input {
+    label {
+      input {
+        width: 370px;
+      }
     }
   }
 }

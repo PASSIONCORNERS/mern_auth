@@ -1,5 +1,6 @@
 .authlayout {
   height: 100vh;
+  overflow-x: hidden;
   background: #1d1927;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -35,7 +36,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 370px;
+  max-width: 300px;
   width: 100%;
   margin-top: 2em;
   padding: 0 2px;
@@ -118,6 +119,12 @@
             box-shadow: 0 5px 15px 0 rgba(252, 222, 255, 0.6);
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+}
+
+@media (min-width: 1200px) {
+  .authlayout_actions {
+    max-width: 370px;
   }
 }
 /*# sourceMappingURL=authlayout.css.map */

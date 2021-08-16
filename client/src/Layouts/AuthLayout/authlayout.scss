@@ -2,6 +2,7 @@
 
 .authlayout {
   height: 100vh;
+  overflow-x: hidden;
   background: $purple-dark;
   display: flex;
   flex-direction: column;
@@ -19,7 +20,7 @@
   &_actions {
     display: flex;
     justify-content: space-between;
-    max-width: 370px;
+    max-width: 300px;
     width: 100%;
     margin-top: 2em;
     padding: 0 2px;
@@ -57,5 +58,12 @@
   100% {
     box-shadow: 0 5px 15px 0 rgba(252, 222, 255, 0.6);
     transform: translateX(0);
+  }
+}
+@include for-desktop {
+  .authlayout {
+    &_actions {
+      max-width: 370px;
+    }
   }
 }

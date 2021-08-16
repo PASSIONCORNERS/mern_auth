@@ -1,14 +1,21 @@
 import Input from "../Input/Input";
 import Avatar from "../Avatar/Avatar";
+import { MdVisibility } from "react-icons/md";
+import { MdVisibilityOff } from "react-icons/md";
 import { AiFillCamera } from "react-icons/ai";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import "./profile.css";
 
 const Profile = () => {
   const inputFile = useRef(null);
+  const [visible, setVisible] = useState(false);
 
   const handleInput = () => {
     inputFile.current.click();
+  };
+
+  const handleClick = () => {
+    setVisible(!visible);
   };
 
   return (
@@ -31,8 +38,18 @@ const Profile = () => {
         <div className="profile_input-form">
           <Input type="text" text="Name" />
           <Input type="text" text="Email" />
-          <Input type="password" text="Password" />
-          <Input type="password" text="Confirm Password" />
+          <Input
+            type={visible ? "text" : "password"}
+            icon={visible ? <MdVisibility /> : <MdVisibilityOff />}
+            text="Password"
+            handleClick={handleClick}
+          />
+          <Input
+            type={visible ? "text" : "password"}
+            icon={visible ? <MdVisibility /> : <MdVisibilityOff />}
+            text="Confirm Password"
+            handleClick={handleClick}
+          />
           <div className="login_btn">
             <button>update</button>
           </div>

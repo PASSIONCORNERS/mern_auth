@@ -13,7 +13,7 @@
   padding: 1.2em;
   border-radius: 5px;
   border: none;
-  width: 370px;
+  width: 300px;
   text-transform: uppercase;
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
@@ -59,5 +59,11 @@
           box-shadow: none;
   background: -webkit-gradient(linear, left top, right top, from(#fbc02d), to(#f96a8b));
   background: linear-gradient(to right, #fbc02d, #f96a8b);
+}
+
+@media (min-width: 1200px) {
+  .login_btn button {
+    width: 370px;
+  }
 }
 /*# sourceMappingURL=login.css.map */
