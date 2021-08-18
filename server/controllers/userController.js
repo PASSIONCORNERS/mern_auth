@@ -29,7 +29,7 @@ const userController = {
           .json({ msg: "This email is already registered in our system." });
 
       // check password
-      if (password.lenght < 6)
+      if (password.length < 6)
         return res
           .status(400)
           .json({ msg: "Password must be at least 6 characters." });
