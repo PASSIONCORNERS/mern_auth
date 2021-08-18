@@ -23,7 +23,7 @@ const userSchema = new Schema(
       default: "",
     },
   },
-  { timestramp: true }
+  { timestamp: true }
 );
 
 const User = model("User", userSchema);
