@@ -43,7 +43,7 @@ const userController = {
       const newUser = { name, email, password: hashPassword };
       const activation_token = createToken.activation(newUser);
 
-      // send emailconst
+      // send email
       const url = `http://localhost:3000/api/auth/activate/${activation_token}`;
       sendMail.sendEmailRegister(email, url, "Verify your email");
 
@@ -81,6 +81,37 @@ const userController = {
       res
         .status(200)
         .json({ msg: "Your account has been activated, you can now sign in." });
+    } catch (err) {
+      res.status(500).json({ msg: err.message });
+    }
+  },
+  signing: async (req, res) => {
+    try {
+      // get cred
+      const { email, password } = req.body;
+
+      // check email
+      const user = await User.findOne({ email });
+      if (!user)
+        return res
+          .status(400)
+          .json({ msg: "This email is not registered in our system." });
+
+      // check password
+      const isMatch = await bcrypt.compare(password, user.password);
+      if (!isMatch)
+        return res.status(400).json({ msg: "This password is incorrect." });
+
+      // refresh token
+      const rf_token = createToken.refresh({ id: user._id });
+      res.cookie("_apprftoken", rf_token, {
+        httpOnly: true,
+        path: "/api/auth/access",
+        maxAage: 24 * 60 * 60 * 1000, // 24h
+      });
+
+      // signing success
+      res.status(200).json({ msg: "Signing success" });
     } catch (err) {
       res.status(500).json({ msg: err.message });
     }

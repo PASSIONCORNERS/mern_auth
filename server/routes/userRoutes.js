@@ -4,5 +4,6 @@ const userController = require("../controllers/userController");
 
 route.post("/api/auth/register", userController.register);
 route.post("/api/auth/activation", userController.activate);
+route.post("/api/auth/signing", userController.signing);
 
 module.exports = route;
