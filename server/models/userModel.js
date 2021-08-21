@@ -20,10 +20,11 @@ const userSchema = new Schema(
     },
     avatar: {
       type: String,
-      default: "",
+      default:
+        "https://res.cloudinary.com/dlzr5mebz/image/upload/v1626018976/avatar/blank_vn48fz.png",
     },
   },
-  { timestamp: true }
+  { timestamps: true }
 );
 
 const User = model("User", userSchema);
