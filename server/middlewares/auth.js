@@ -2,13 +2,14 @@ const jwt = require("jsonwebtoken");
 
 const auth = (req, res, next) => {
   try {
-    // check if access token exist
+    // check ac token
     const token = req.header("Authorization");
     if (!token) return res.status(400).json({ msg: "Authentication failed." });
-    // check if access token is valid
+
+    // validate
     jwt.verify(token, process.env.ACCESS_TOKEN, (err, user) => {
       if (err) return res.status(400).json({ msg: "Authentication failed." });
-      // if all pass
+      // success
       req.user = user;
       next();
     });
