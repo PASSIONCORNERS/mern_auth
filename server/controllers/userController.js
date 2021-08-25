@@ -212,7 +212,7 @@ const userController = {
       // clear cookie
       res.clearCookie("_apprftoken", { path: "/api/auth/access" });
       // success
-      return res.status(500).json({ msg: "Signout success." });
+      return res.status(200).json({ msg: "Signout success." });
     } catch (err) {
       res.status(500).json({ msg: err.message });
     }
@@ -245,7 +245,7 @@ const userController = {
         // store cookie
         res.cookie("_apprftoken", rf_token, {
           httpOnly: true,
-          path: "/api/auth/acess",
+          path: "/api/auth/access",
           maxAge: 24 * 60 * 60 * 1000, // 24hrs
         });
         res.status(200).json({ msg: "Signing with Google success." });
@@ -267,7 +267,7 @@ const userController = {
         // store cookie
         res.cookie("_apprftoken", rf_token, {
           httpOnly: true,
-          path: "/api/auth/acess",
+          path: "/api/auth/access",
           maxAge: 24 * 60 * 60 * 1000, // 24hrs
         });
         // success
