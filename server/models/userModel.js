@@ -20,7 +20,8 @@ const userSchema = new Schema(
     },
     avatar: {
       type: String,
-      default: "",
+      default:
+        "https://res.cloudinary.com/drkyd0zuy/image/upload/v1629902679/avatar/blank_avatar_eqtraf.png",
     },
   },
   { timestamp: true }
