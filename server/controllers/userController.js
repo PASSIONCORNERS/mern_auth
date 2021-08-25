@@ -4,7 +4,8 @@ const validateEmail = require("../helpers/validateEmail");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/userModel");
-const { activation } = require("../helpers/createToken");
+const { google } = require("googleapis");
+const { OAuth2 } = google.auth;
 
 const userController = {
   register: async (req, res) => {
@@ -202,6 +203,76 @@ const userController = {
       await User.findOneAndUpdate({ _id: req.user.id }, { name, avatar });
       // success
       res.status(200).json({ msg: "Update success." });
+    } catch (err) {
+      res.status(500).json({ msg: err.message });
+    }
+  },
+  signout: async (req, res) => {
+    try {
+      // clear cookie
+      res.clearCookie("_apprftoken", { path: "/api/auth/access" });
+      // success
+      return res.status(500).json({ msg: "Signout success." });
+    } catch (err) {
+      res.status(500).json({ msg: err.message });
+    }
+  },
+  google: async (req, res) => {
+    try {
+      // get Token Id
+      const { tokenId } = req.body;
+
+      // verify Token Id
+      const client = new OAuth2(process.env.G_CLIENT_ID);
+      const verify = await client.verifyIdToken({
+        idToken: tokenId,
+        audience: process.env.G_CLIENT_ID,
+      });
+
+      // get data
+      const { email_verified, email, name, picture } = verify.payload;
+
+      // failed verification
+      if (!email_verified)
+        return res.status(400).json({ msg: "Email verification failed." });
+
+      // passed verification
+      const user = await User.findOne({ email });
+      // 1. If user exist / sign in
+      if (user) {
+        // refresh token
+        const rf_token = createToken.refresh({ id: user._id });
+        // store cookie
+        res.cookie("_apprftoken", rf_token, {
+          httpOnly: true,
+          path: "/api/auth/acess",
+          maxAge: 24 * 60 * 60 * 1000, // 24hrs
+        });
+        res.status(200).json({ msg: "Signing with Google success." });
+      } else {
+        // new user / create user
+        const password = email + process.env.G_CLIENT_ID;
+        const salt = await bcrypt.genSalt();
+        const hashPassword = await bcrypt.hash(password, salt);
+        const newUser = new User({
+          name,
+          email,
+          password: hashPassword,
+          avatar: picture,
+        });
+        await newUser.save();
+        // sign in the user
+        // refresh token
+        const rf_token = createToken.refresh({ id: user._id });
+        // store cookie
+        res.cookie("_apprftoken", rf_token, {
+          httpOnly: true,
+          path: "/api/auth/acess",
+          maxAge: 24 * 60 * 60 * 1000, // 24hrs
+        });
+        // success
+        res.status(200).json({ msg: "Signing with Google success." });
+      }
     } catch (err) {
       res.status(500).json({ msg: err.message });
     }
