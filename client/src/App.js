@@ -3,9 +3,11 @@ import ActivateLayout from "./Layouts/ActivateLayout/ActivateLayout";
 import AuthLayout from "./Layouts/AuthLayout/AuthLayout";
 import ProfileLayout from "./Layouts/ProfileLayout/ProfileLayout";
 import ResetLayout from "./Layouts/ResetLayout/ResetLayout";
+import { AuthContext } from "./context/AuthContext";
+import { useContext } from "react";
 
 function App() {
-  const isLoggedIn = false;
+  const { isLoggedIn } = useContext(AuthContext);
 
   return (
     <Router>
