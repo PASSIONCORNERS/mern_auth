@@ -21,7 +21,7 @@ function App() {
           component={ResetLayout}
         />
         <Route
-          path="/api/auth/activate/:activate_token"
+          path="/api/auth/activate/:activation_token"
           exact
           component={ActivateLayout}
         />
