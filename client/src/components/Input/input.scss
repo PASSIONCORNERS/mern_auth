@@ -51,6 +51,15 @@
     }
   }
 }
+.toast-failed {
+  background: $pink !important;
+  color: #fff;
+}
+.toast-success {
+  background: $green !important;
+  color: #fff;
+}
+
 @include for-desktop {
   .input {
     label {

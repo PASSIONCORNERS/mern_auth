@@ -63,6 +63,16 @@
   cursor: pointer;
 }
 
+.toast-failed {
+  background: #f96a8b !important;
+  color: #fff;
+}
+
+.toast-success {
+  background: #009688 !important;
+  color: #fff;
+}
+
 @media (min-width: 1200px) {
   .input label input {
     width: 370px;
