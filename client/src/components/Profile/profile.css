@@ -68,4 +68,9 @@
       -ms-flex-align: center;
           align-items: center;
 }
+
+.bg-upload {
+  background: #2196f3 !important;
+  color: #fff;
+}
 /*# sourceMappingURL=profile.css.map */
