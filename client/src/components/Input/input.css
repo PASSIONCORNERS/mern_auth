@@ -73,6 +73,10 @@
   color: #fff;
 }
 
+input[type="text"]:disabled {
+  color: #000;
+}
+
 @media (min-width: 1200px) {
   .input label input {
     width: 370px;
